@@ -17,12 +17,7 @@ const Index = () => {
       <main className="container mx-auto px-4 py-8">
         <div className="flex justify-between items-center mb-6">
           <h1 className="text-3xl font-bold tracking-tight">AI Discovery Portal</h1>
-          <Link to="/chat">
-            <Button className="gap-2">
-              <MessageSquare className="h-5 w-5" />
-              <span>Chat with AI</span>
-            </Button>
-          </Link>
+         
         </div>
         
         <div className="grid gap-8 md:grid-cols-2">
