@@ -21,9 +21,10 @@ const InsightCard: React.FC<InsightCardProps> = ({ insight, rank, className }) =
         className
       )}
     >
-      <div className="absolute -right-4 -top-4 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br opacity-10",
+      <div className={cn(
+        "absolute -right-4 -top-4 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br opacity-10",
         isBlocker ? "from-red-300 to-red-500" : "from-green-300 to-green-500"
-      >
+      )}>
         {isBlocker ? (
           <AlertTriangle className="h-8 w-8" />
         ) : (
