@@ -14,17 +14,17 @@ const InsightSection: React.FC<InsightSectionProps> = ({ title, insights, type }
   const isBlocker = type === 'blocker';
   
   return (
-    <div className="space-y-4">
-      <div className="flex items-center space-x-2">
+    <div className="space-y-6">
+      <div className="flex items-center space-x-3">
         {isBlocker ? (
-          <AlertTriangle className="h-6 w-6 text-ai-red" />
+          <AlertTriangle className="h-6 w-6 text-solita-red" />
         ) : (
-          <Lightbulb className="h-6 w-6 text-ai-green" />
+          <Lightbulb className="h-6 w-6 text-solita-blue" />
         )}
-        <h2 className="text-xl font-bold">{title}</h2>
+        <h2 className="text-2xl font-bold text-solita-black">{title}</h2>
       </div>
       
-      <div className="grid gap-4 md:grid-cols-1 lg:grid-cols-1">
+      <div className="grid gap-5 md:grid-cols-1 lg:grid-cols-1">
         {insights.map((insight, index) => (
           <InsightCard 
             key={insight.id}

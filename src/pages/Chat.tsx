@@ -66,17 +66,17 @@ const Chat: React.FC = () => {
     <div className="flex flex-col h-screen">
       <Header />
       
-      <div className="container mx-auto px-4 flex-1 flex flex-col overflow-hidden">
+      <div className="solita-container flex-1 flex flex-col overflow-hidden">
         <div className="py-4 flex items-center">
           <Button 
             variant="ghost" 
             size="icon" 
             onClick={() => navigate('/')}
-            className="mr-2"
+            className="mr-2 text-solita-black hover:text-solita-blue hover:bg-solita-gray-light"
           >
             <ArrowLeft className="h-5 w-5" />
           </Button>
-          <h1 className="text-2xl font-bold">AI Discovery Chat</h1>
+          <h1 className="text-2xl font-bold text-solita-black">AI Discovery Chat</h1>
         </div>
         
         <div className="flex-1 overflow-y-auto pb-4">
@@ -85,21 +85,21 @@ const Chat: React.FC = () => {
               <div 
                 key={message.id}
                 className={cn(
-                  "p-4 rounded-lg max-w-[85%]",
+                  "p-4 rounded-md max-w-[85%]",
                   message.role === 'user' 
-                    ? "bg-primary text-primary-foreground ml-auto" 
-                    : "bg-muted mr-auto"
+                    ? "bg-solita-blue text-white ml-auto" 
+                    : "bg-solita-gray-light text-solita-black mr-auto"
                 )}
               >
                 <p>{message.content}</p>
               </div>
             ))}
             {isLoading && (
-              <div className="p-4 rounded-lg max-w-[85%] bg-muted mr-auto">
+              <div className="p-4 rounded-md max-w-[85%] bg-solita-gray-light text-solita-black mr-auto">
                 <div className="flex space-x-2">
-                  <div className="w-2 h-2 rounded-full bg-gray-400 animate-bounce"></div>
-                  <div className="w-2 h-2 rounded-full bg-gray-400 animate-bounce [animation-delay:0.2s]"></div>
-                  <div className="w-2 h-2 rounded-full bg-gray-400 animate-bounce [animation-delay:0.4s]"></div>
+                  <div className="w-2 h-2 rounded-full bg-solita-gray animate-bounce"></div>
+                  <div className="w-2 h-2 rounded-full bg-solita-gray animate-bounce [animation-delay:0.2s]"></div>
+                  <div className="w-2 h-2 rounded-full bg-solita-gray animate-bounce [animation-delay:0.4s]"></div>
                 </div>
               </div>
             )}
@@ -107,13 +107,13 @@ const Chat: React.FC = () => {
           </div>
         </div>
         
-        <div className="border-t py-4">
+        <div className="border-t border-solita-gray-light py-4">
           <div className="flex gap-2">
             <Textarea
               value={input}
               onChange={(e) => setInput(e.target.value)}
               placeholder="Type your message..."
-              className="flex-1 resize-none"
+              className="flex-1 resize-none border-solita-gray-light focus-visible:ring-solita-blue"
               onKeyDown={(e) => {
                 if (e.key === 'Enter' && !e.shiftKey) {
                   e.preventDefault();
@@ -124,7 +124,7 @@ const Chat: React.FC = () => {
             <Button 
               onClick={handleSendMessage} 
               disabled={isLoading || !input.trim()}
-              className="h-full"
+              className="h-full bg-solita-blue hover:bg-solita-blue-light"
             >
               <Send className="h-5 w-5" />
             </Button>
