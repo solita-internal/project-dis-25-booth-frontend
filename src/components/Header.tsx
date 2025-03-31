@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Brain, Menu, MessageSquare } from 'lucide-react';
+import { Menu, MessageSquare } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Header: React.FC = () => {
@@ -10,8 +10,12 @@ const Header: React.FC = () => {
       <div className="solita-container">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
-            <Brain className="h-8 w-8 text-solita-blue" />
-            <h1 className="text-xl font-bold text-solita-black">AI Discovery Portal</h1>
+            <Link to="/" className="flex items-center">
+              <span className="text-2xl font-bold text-solita-blue tracking-tight">SOLITA</span>
+            </Link>
+            <div className="ml-6 hidden md:block">
+              <h1 className="text-xl font-medium text-solita-black">AI Discovery Portal</h1>
+            </div>
           </div>
           
           <div className="hidden md:flex items-center space-x-6">
