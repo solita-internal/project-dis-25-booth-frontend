@@ -63,13 +63,25 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Custom colors for our AI insights portal
+				// Solita colors
+				solita: {
+					'black': '#000000',
+					'white': '#FFFFFF',
+					'gray-light': '#F2F2F2',
+					'gray': '#888888',
+					'gray-dark': '#4E4E4E',
+					'blue': '#011D85',
+					'blue-light': '#2D68F3',
+					'red': '#E73F1A',
+					'yellow': '#FFC800'
+				},
+				// Custom colors for our AI insights portal, now using Solita's palette
 				ai: {
-					'blue': '#2563eb',
-					'purple': '#7c3aed',
-					'red': '#dc2626',
-					'green': '#16a34a',
-					'gray': '#4b5563'
+					'blue': '#011D85',   // Solita blue
+					'purple': '#2D68F3', // Solita blue-light
+					'red': '#E73F1A',    // Solita red
+					'green': '#009639',  // Added a green for opportunities
+					'gray': '#4E4E4E'    // Solita gray-dark
 				}
 			},
 			borderRadius: {
@@ -103,6 +115,10 @@ export default {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'pulse-slow': 'pulse-slow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+			},
+			fontFamily: {
+				'sans': ['Arial', 'sans-serif'],
+				'solita': ['Arial', 'Helvetica', 'sans-serif'],
 			}
 		}
 	},
